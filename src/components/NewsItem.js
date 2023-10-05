@@ -1,12 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 
 
-export class NewsItem extends Component {
+const NewsItem=(props)=> {
 
-
-  render() {
-    let { imageUrl, newsUrl, title, description, author, date, source } = this.props;
+    let { imageUrl, newsUrl, title, description, author, date, source } = props;
     return (
       <div className='my-3'>
         <div className="card" >
@@ -18,7 +16,7 @@ export class NewsItem extends Component {
               right:'0'
             }
           }>
-          <span class="badge rounded-pill bg-danger" >
+          <span  className="badge rounded-pill bg-danger" >
            {source}
 
           </span>
@@ -27,14 +25,14 @@ export class NewsItem extends Component {
           <div className="card-body">
             <h5 className="card-title">{title}...</h5>
             <p className="card-text">{description}... </p>
-            <p class="card-text"><small class="text-body-secondary">By { author?author:"Unknown"} at {new Date(date).toGMTString()}</small></p>
+            <p  className="card-text"><small  className="text-body-secondary">By { author?author:"Unknown"} at {new Date(date).toGMTString()}</small></p>
             <a href={newsUrl} className="btn btn-sm btn-primary">Read more</a>
           </div>
         </div>
       </div>
     )
   }
-}
+
 
 export default NewsItem;
 
