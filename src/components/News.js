@@ -31,11 +31,10 @@ const News=(props)=> {
       
     }
     useEffect(()=>{
-      console.log("using the update function");
       update(props);
       document.title=`${Capitalize( props.category)}-NewsMonkey`
 
-    },[])
+    },[props.category, props.apikey, props.pageSize])
   
 
     const fetchMoreData = async() => {

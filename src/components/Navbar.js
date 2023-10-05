@@ -25,6 +25,7 @@ const Navbar =()=> {
        <li className="nav-item"><Link className="nav-link text-light" to="/science"> Science</Link> </li>
        <li className="nav-item"><Link className="nav-link text-light" to="/sports"> Sports</Link> </li>
        <li className="nav-item"><Link className="nav-link text-light" to="/technology"> Technology</Link> </li>
+       <li className="nav-item"><Link className="nav-link text-light" to="/tech"> tech</Link> </li>
       </ul>
     </div>
   </div>
